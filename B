@@ -1,0 +1,74 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Assignment3B {
+
+  public:
+
+    void checkEncoding() {
+
+        int width, height, size;
+
+        int bpc;
+
+        std::cout << "[Image Encoding Checker] What is the image width? ";
+        std::cin >> width;
+
+        std::cout << "[Image Encoding Checker] What is the image height? ";
+        std::cin >> height;
+
+        std::cout << "[Image Encoding Checker] What is the file size (in bytes)? ";
+        std::cin >> size;
+
+        
+        if (width <= 0 || height <= 0 || size <= 0) {
+
+            std::cout << "The information is invalid - please re-enter it." << std::endl;
+            return;
+
+        }
+
+        bpc = (size * 8) / (width * height * 3);
+       
+        switch (bpc) {
+
+            case 8:
+
+                std::cout << "The RGB image is encoded with 8 bits per channel." << std::endl;
+
+                break;
+
+            case 16:
+
+                std::cout << "The RGB image is encoded with 16 bits per channel." << std::endl;
+
+                break;
+
+            case 32:
+
+                std::cout << "The RGB image is encoded with 32 bits per channel." << std::endl;
+
+                break;
+
+            default:
+
+                std::cout << "The computer does not know how to read this encoding." << std::endl;
+
+        }
+
+    }
+
+};
+
+
+
+int main() {
+
+    Assignment3B assignment;
+
+    assignment.checkEncoding();
+
+    return 0;
+
+}
