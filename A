@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Assignment3A {
+
+public:
+
+  void run() {
+
+    double xCoordinate, yCoordinate;
+
+    cout << "[Cretaceous Park GIS]" << endl;
+
+    cout << "X Coordinate: ";
+
+    cin >> xCoordinate;
+
+    cout << "Y Coordinate: ";
+
+    cin >> yCoordinate;
+
+
+    if (xCoordinate < 0 || xCoordinate > 20 || yCoordinate < -20 || yCoordinate > 20) {
+
+      cout << "WARNING: You've left the boundaries of the park. Please return immediatley." << endl;
+
+    } else if (xCoordinate >= 0 && xCoordinate <= 10 && yCoordinate >= 0 && yCoordinate <= 10) {
+
+      cout << "You are at the Visitor's Center" << endl;
+
+    } else if (xCoordinate >= 0 && xCoordinate <= 10 && yCoordinate >= 10 && yCoordinate <= 20) {
+
+      cout << "You are at the T. Rex Lake" << endl;
+
+    } else if (xCoordinate >= 10 && xCoordinate <= 20 && yCoordinate >= 0 && yCoordinate <= 10) {
+
+      cout << "You are at the Velociraptor Valley" << endl;
+
+    } else {
+
+      cout << "You are at the Triceratops Territory" << endl;
+
+    }
+
+  }
+
+};
+
+int main() {
+
+
+  return 0;
+
+}
