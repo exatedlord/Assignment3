@@ -1,0 +1,46 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Assignment3C{
+public:
+    void run()
+    {
+        std::cout << "[Cretaceous Park Dialog]" << std::endl << std::endl;
+        std::cout << "Oh no, the power has gone out at Cretaceous Park!" << std::endl;
+        std::cout << "1) What does that mean?" << std::endl;
+        std::cout << "2) No, I just turned the light off." << std::endl;
+        std::string userInput;
+        std::getline(std::cin, userInput);
+        if (userInput == "1")
+        {
+            std::cout << "What does that mean?" << std::endl;
+            std::cout << "The dinosaurs will get loose! again..." << std::endl;
+            std::cout << "1) Life finds a way..." << std::endl;
+            std::cout << "2) What do we do?" << std::endl;
+            std::getline(std::cin, userInput);
+            if (userInput == "1")
+            {
+                std::cout << "Life finds a way..." << std::endl;
+                std::cout << "That's not helpful right now! " << std::endl;
+                std::cout << "We have to evacuate the park! " << std::endl;
+            }
+            else if (userInput == "2")
+            {
+                std::cout << "What do we do?" << std::endl;
+                std::cout << "We have to evacuate the park!" << std::endl;
+            }
+        }
+        else if (userInput == "2")
+        {
+            std::cout << "Oh thank goodness!" << std::endl;
+        }
+    }
+};
+
+int main()
+{
+    Assignment3C assignment3C;
+    assignment3C.run();
+    return 0;
+}
